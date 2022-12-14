@@ -1,0 +1,38 @@
+{
+  "name": "hardhat-nft",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test test/unit/*.spec.js",
+    "test-staging": "hardhat test test/staging/*.spec.js --network goerli",
+    "deploy": "hardhat run scripts/deployment/main.js",
+    "lint": "solhint 'contracts/*.sol'",
+    "lint:fix": "solhint 'contracts/**/*.sol' --fix",
+    "format": "prettier --write .",
+    "coverage": "hardhat coverage --solcoverjs ./.solcover.js",
+    "fuzzing": "docker run -it --rm -v $PWD:/src trailofbits/eth-security-toolbox"
+  },
+  "devDependencies": {
+    "@chainlink/contracts": "^0.5.1",
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@nomiclabs/hardhat-etherscan": "^3.1.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.8.0",
+    "base64-sol": "^1.1.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.2",
+    "hardhat-contract-sizer": "^2.6.1",
+    "hardhat-deploy": "^0.11.20",
+    "hardhat-gas-reporter": "^1.0.9",
+    "path": "^0.12.7",
+    "prettier": "^2.8.0",
+    "prettier-plugin-solidity": "^1.0.0",
+    "solhint": "^3.3.7",
+    "solidity-coverage": "^0.8.2"
+  },
+  "dependencies": {
+    "@pinata/sdk": "^1.1.23"
+  }
+}
